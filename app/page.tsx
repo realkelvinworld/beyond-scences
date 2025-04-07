@@ -8,7 +8,13 @@ export default function Home() {
     <LoadingLayout>
       <div className="bg-black h-screen flex flex-col  justify-center items-center">
         <div className=" relative ">
-          <Image src={HomeImage} alt="HomeImage" />
+          <Image src={HomeImage} alt="HomeImage" className="hidden lg:block" />
+          <Image
+            src={HomeImage}
+            alt="HomeImage"
+            height={500}
+            className="block lg:hidden"
+          />
         </div>
         <div className="absolute top-[calc(1/1.8 * 100%)] flex gap-2 items-center justify-center">
           <h1 className="font-qrada  text-white text-5xl lg:text-9xl text-center">

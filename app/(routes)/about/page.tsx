@@ -4,8 +4,8 @@ import React from "react";
 export default function Page() {
   return (
     <LoadingLayout>
-      <div className=" h-screen flex flex-col justify-center items-center p-4">
-        <div className="lg:w-[800px] w-96">
+      <div className=" h-[105vh]  lg:h-screen flex flex-col justify-center items-center p-7">
+        <div className="lg:w-[800px] w-96  p-6">
           <h1 className="font-montserrat font-medium text-5xl lg:text-6xl text-left  ">
             An experienced photographer and creative director - based in{" "}
             <span className="font-qrada text-3xl lg:font-normal font-semibold lg:text-6xl text-left ">

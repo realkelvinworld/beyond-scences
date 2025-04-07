@@ -9,7 +9,7 @@ export default function Nav() {
 
   return (
     <nav className="font-montserrat font-semibold ">
-      <div className="flex justify-between items-center fixed top-4 w-full lg:p-4 p-2 z-10 ">
+      <div className="flex justify-between items-center fixed top-6 w-full lg:p-4 p-2 z-10 ">
         {navItemsTop.map((item) => (
           <Link
             href={item.href}
@@ -32,7 +32,7 @@ export default function Nav() {
           </Link>
         ))}
       </div>
-      <div className="flex justify-between items-center fixed bottom-4 w-full lg:p-4 p-2 z-10">
+      <div className="flex justify-between items-center fixed bottom-6 w-full lg:p-4 p-2 z-10">
         {navItemsBottom.map((item) => (
           <Link
             href={item.href}
