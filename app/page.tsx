@@ -1,13 +1,46 @@
 import LoadingLayout from "@/components/animation/loading-layout";
-import { ArrowRight } from "lucide-react";
-import { HomeImage } from "@/lib/image";
 import Image from "next/image";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselNavigation,
+  CarouselIndicator,
+  CarouselItem,
+} from "@/components/motion-primitives/carousel";
+import { carouselImages } from "@/lib/local-store";
 
 export default function Home() {
   return (
     <LoadingLayout>
-      <div className="bg-black h-screen flex flex-col  justify-center items-center">
-        <div className=" relative ">
+      <div className="bg-black h-[100dvh] flex flex-col  justify-center items-center">
+        <Carousel>
+          <CarouselContent>
+            {carouselImages.map((c) => (
+              <CarouselItem key={c.id} className="p-4">
+                <div className="flex  items-center justify-center ">
+                  <Image
+                    src={c.src}
+                    alt={c.alt}
+                    className="object-cover hidden lg:block"
+                    height={600}
+                  />
+                  <Image
+                    src={c.src}
+                    alt={c.alt}
+                    className="object-cover lg:hidden block"
+                    height={400}
+                  />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselNavigation
+            alwaysShow
+            className="flex items-center justify-between  "
+          />
+          <CarouselIndicator />
+        </Carousel>
+        {/* <div className=" relative ">
           <Image src={HomeImage} alt="HomeImage" className="hidden lg:block" />
           <Image
             src={HomeImage}
@@ -23,7 +56,7 @@ export default function Home() {
           <div className=" border rounded-full border-white p-4 mt-4 flex items-center justify-center">
             <ArrowRight className="text-white  " />
           </div>
-        </div>
+        </div> */}
       </div>
     </LoadingLayout>
   );
