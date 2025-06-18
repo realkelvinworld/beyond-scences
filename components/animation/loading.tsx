@@ -34,14 +34,6 @@ export function LoadingAnimation() {
               )}
             >
               <Image src={Logo} alt="logo of beyond scenes" width={400} />
-              {/* <TextEffect
-                per="char"
-                as="span"
-                preset="fade"
-                className="text-white text-center"
-              >
-                BEYOND SCENCES
-              </TextEffect> */}
             </h2>
           </section>
         </motion.div>
