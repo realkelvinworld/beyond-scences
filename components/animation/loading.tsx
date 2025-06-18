@@ -1,8 +1,7 @@
 // import { TextEffect } from "../motion-primitives/text-effect";
 import { AnimatePresence, motion } from "motion/react";
 import { useState, useEffect } from "react";
-import { FONT_QRADA } from "@/lib/font";
-import { cn } from "@/lib/utils";
+
 import Image from "next/image";
 import { Logo } from "@/public/Images";
 
@@ -27,14 +26,7 @@ export function LoadingAnimation() {
           transition={{ duration: 0.5 }}
         >
           <section className="">
-            <h2
-              className={cn(
-                FONT_QRADA.variable,
-                "text-4xl  md:text-[10.4vw]  text-white text-center -tracking-[0.2rem] md:-tracking-[0.5vw] font-qrada "
-              )}
-            >
-              <Image src={Logo} alt="logo of beyond scenes" width={400} />
-            </h2>
+            <Image src={Logo} alt="logo of beyond scenes" width={400} />
           </section>
         </motion.div>
       )}
